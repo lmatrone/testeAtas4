@@ -124,7 +124,7 @@
             function mostrarNumeroAtas() {
                 event.preventDefault();
                 $("#resultadoPesquisa2").html("");
-                contract.mostrarNumeroAtas(frmPesquisa2.value, function (erro, resultado) {
+                contract.mostrarNumeroAtas(frmPesquisa2.value -1, function (erro, resultado) {
                     if (erro) {
                         console.log("mostrarNumeroAtas");
                         console.error(erro);
