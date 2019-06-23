@@ -23,6 +23,14 @@
             <div id="registro">
                 <form action="#" method="POST" name="formRegistro" id="formRegistro">
                     <div>
+                        <label for="data"><font face="Calibri">Data da Reunião: </font></label>
+                        <input type="date" name="data" id="data" />
+                    </div>
+                                        <div>
+                        <label for="data"><font face="Calibri">Participantes: </font></label>
+                        <input type="text" name="participantes" id="participantes" size="80" />
+                    </div>
+                    <div>
                         <label for="pauta"><font face="Calibri">Pauta da reunião: </font></label>
                         <input type="text" name="pauta" id="pauta" size="80" />
                     </div>
@@ -30,11 +38,6 @@
                         <label for="decisao"><font face="Calibri">Deliberações: </font></label>
                         <input type="text" name="decisao" id="decisao" size="80" />
                     </div>
-                    <div>
-                        <label for="data"><font face="Calibri">Data da Reunião: </font></label>
-                        <input type="date" name="data" id="data" />
-                    </div>
-          
                     <div>
                         <button onclick="ArquivarAta()" class="btn btn-danger"><span class="glyphicon glyphicon-th"> <font face="Calibri">  GRAVAR</span></font></button>
                     </div>
@@ -128,7 +131,7 @@
             function ArquivarAta() {
                 event.preventDefault();
                 $("#statusTransacao").html("&nbsp;");
-                contract.ArquivarAta(frmRegistro.pauta.value, frmRegistro.decisao.value, frmRegistro.data.value, {from: web3.eth.accounts[0], gas: 3000000, value: 0}, function (erro, resultado) {
+                contract.ArquivarAta(frmRegistro.pauta.value, frmRegistro.decisao.value, frmRegistro.data.value, frmRegistro.participantes.value {from: web3.eth.accounts[0], gas: 3000000, value: 0}, function (erro, resultado) {
                     if (erro) {
                         console.log("ArquivarAta");
                         console.error(erro);
