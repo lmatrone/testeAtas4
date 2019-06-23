@@ -13,6 +13,10 @@ const   contractABI = [
 			{
 				"name": "paramData",
 				"type": "string"
+			},
+			{
+				"name": "paramParticipantes",
+				"type": "string"
 			}
 		],
 		"name": "ArquivarAta",
@@ -20,6 +24,18 @@ const   contractABI = [
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "time",
+		"type": "event"
 	},
 	{
 		"constant": true,
@@ -41,6 +57,10 @@ const   contractABI = [
 			},
 			{
 				"name": "data",
+				"type": "string"
+			},
+			{
+				"name": "participantes",
 				"type": "string"
 			}
 		],
@@ -69,6 +89,10 @@ const   contractABI = [
 			{
 				"name": "data",
 				"type": "string"
+			},
+			{
+				"name": "participantes",
+				"type": "string"
 			}
 		],
 		"payable": false,
@@ -85,6 +109,10 @@ const   contractABI = [
 		],
 		"name": "buscaPorData",
 		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
 			{
 				"name": "",
 				"type": "string"
@@ -120,14 +148,28 @@ const   contractABI = [
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "mostrarNumeroAtas",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ]
     
     if (network === "4") {
-        contractAddress = "0xadb0704d93035935e14166c25bb938fb83d8297c"; 
+        contractAddress = "0x6ce2d9efbc23dda8f5e4f09fbc31e3af5e3c0cd4"; 
     
     } else {
-    contractAddress = "0xadb0704d93035935e14166c25bb938fb83d8297c"; 
+    contractAddress = "0x6ce2d9efbc23dda8f5e4f09fbc31e3af5e3c0cd4"; 
 }
 
 contract = web3.eth.contract(contractABI).at(contractAddress);
