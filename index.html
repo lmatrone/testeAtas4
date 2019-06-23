@@ -139,7 +139,7 @@
             function ArquivarAta() {
                 event.preventDefault();
                 $("#statusTransacao").html("&nbsp;");
-                contract.ArquivarAta(frmRegistro.pauta.value, frmRegistro.decisao.value, frmRegistro.data.value, {from: web3.eth.accounts[0], gas: 3000000, value: 0}, function (erro, resultado) {
+                contract.ArquivarAta(frmRegistro.pauta.value, frmRegistro.decisao.value, frmRegistro.data.value, frmRegistro.participantes.value {from: web3.eth.accounts[0], gas: 3000000, value: 0}, function (erro, resultado) {
                     if (erro) {
                         console.log("ArquivarAta");
                         console.error(erro);
