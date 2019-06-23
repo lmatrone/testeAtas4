@@ -1,4 +1,3 @@
-
 var web3;
 var contract;
 var network;
