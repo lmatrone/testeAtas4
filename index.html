@@ -73,7 +73,7 @@
                     </form>
                     <div id="resultadoPesquisa1"></div>
                     
-                     <h2><font face="Calibri">Número de Atas Registradas</font></h2>
+                     <h2><font face="Calibri">Número de Registros</font></h2>
                 <div id="data">
                     <form action="#" method="get" name="formPesquisa2" id="formPesquisa2">
                         <div>
@@ -124,7 +124,7 @@
             function mostrarNumeroAtas() {
                 event.preventDefault();
                 $("#resultadoPesquisa2").html("");
-                contract.mostrarNumeroAtas(frmPesquisa2.value -1, function (erro, resultado) {
+                contract.mostrarNumeroAtas(frmPesquisa2.value, function (erro, resultado) {
                     if (erro) {
                         console.log("mostrarNumeroAtas");
                         console.error(erro);
