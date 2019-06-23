@@ -92,7 +92,7 @@
             var frmPesquisa = document.formPesquisa;
             function consultarDecisoes() {
                 event.preventDefault();
-                $("#resultadoPesquisa").html("");
+                $("#resultadoPesquisa1").html("");
                 contract.ConsultaDeliberacoesConselho(frmPesquisa.numeroAta.value, function (erro, resultado) {
                     if (erro) {
                         console.log("consultarDecisoes");
@@ -101,7 +101,7 @@
                         frmPesquisa.numeroAta.value = "";
                         return
                     }
-                    $("#resultadoPesquisa").html(" Data: " + resultado[2]+"." + " Participantes: " + resultado[3]+"." + " Pauta: " + resultado[0]+"." + " Deliberações: " + resultado[1]+".");
+                    $("#resultadoPesquisa1").html(" Data: " + resultado[2]+"." + " Participantes: " + resultado[3]+"." + " Pauta: " + resultado[0]+"." + " Deliberações: " + resultado[1]+".");
                 })
             }
 
