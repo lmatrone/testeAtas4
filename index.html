@@ -21,68 +21,72 @@
            <a rel='nofollow' href='https://br.qr-code-generator.com/
             ' border='0' style='cursor:default'></a><img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Frinkeby.etherscan.io%2Faddress%2F0x6ce2d9efbc23dda8f5e4f09fbc31e3af5e3c0cd4&chs=180x180&choe=UTF-8&chld=L|2' alt=''>
             </div style> 
-            <h2><font face="Calibri">Registrar Atas</font></h2>
+            <h2><font face="Calibri"><div style=margin-left:10px>Registrar Atas</font></h2>
             <div id="registro">
                 <form action="#" method="POST" name="formRegistro" id="formRegistro">
                     <div>
-                        <label for="data"><font face="Calibri">Data da Reunião: </font></label>
+                        <label for="data"><font face="Calibri"><div style=margin-left:10px>Data da Reunião: </font></label>
                         <input type="date" name="data" id="data" />
                     </div>
                                         <div>
-                        <label for="data"><font face="Calibri">Participantes: </font></label>
+                        <label for="data"><font face="Calibri"><div style=margin-left:10px>Participantes: </font></label>
                         <input type="text" name="participantes" id="participantes" size="80" />
                     </div>
                     <div>
-                        <label for="pauta"><font face="Calibri">Pauta da reunião: </font></label>
+                        <label for="pauta"><font face="Calibri"><div style=margin-left:10px>Pauta da reunião: </font></label>
                         <input type="text" name="pauta" id="pauta" size="80" />
                     </div>
                     <div>
-                        <label for="decisao"><font face="Calibri">Deliberações: </font></label>
+                        <label for="decisao"><font face="Calibri"><div style=margin-left:10px>Deliberações: </font></label>
                         <input type="text" name="decisao" id="decisao" size="80" />
                     </div>
                     <div>
-                        <button onclick="ArquivarAta()" class="btn btn-danger"><span class="glyphicon glyphicon-th"> <font face="Calibri">  GRAVAR</span></font></button>
+                    <br>
+                    <div style=margin-left:10px><button onclick="ArquivarAta()" class="btn btn-danger"><span class="glyphicon glyphicon-th"><font face="Calibri">  GRAVAR</span></font></button>
                     </div>
                 </form>
                 <br>
                 <div>
                     <div id="statusTransacao">&nbsp;</div>
               <br>
-            <h2><font face="Calibri">Busca por número de Ata</font></h2>
+            <h2><font face="Calibri"><div style=margin-left:10px>Busca por número de Ata</font></h2>
             <div id="decisao">
                 <form action="#" method="get" name="formPesquisa" id="formPesquisa">
                     <div>
-                        <label for="numeroAta"><font face="Calibri">Informe o número de Ata: </font></label>
+                        <label for="numeroAta"><font face="Calibri"><div style=margin-left:10px>Informe o número de Ata: </font></label>
                         <input type="number" name="numeroAta" id="numeroAta" />
                     </div>
+                    <br>
                     <div>
-                    <button onclick="consultarDecisoes()" class="btn btn-primary"><span class="glyphicon glyphicon-search"><font face="Calibri">  CONSULTAR</font></span></button>
+                    <div style=margin-left:10px><button onclick="consultarDecisoes()" class="btn btn-primary"><span class="glyphicon glyphicon-search"><font face="Calibri">  CONSULTAR</font></span></button>
                     </div>
                 <br>
                 </form>
                 <div id="resultadoPesquisa"></div>
 
-                <h2><font face="Calibri">Busca por Data</font></h2>
+                <h2><font face="Calibri"><div style=margin-left:10px>Busca por Data</font></h2>
                 <div id="data">
                     <form action="#" method="get" name="formPesquisa1" id="formPesquisa1">
                         <div>
-                            <label for="_data"><font face="Garamond">Informe a Data da Reunião: </font></label>
+                            <label for="_data"><font face="Garamond"><div style=margin-left:10px>Informe a Data da Reunião: </font></label>
                             <input type="date" name="_data" id="_data" />
                         </div>
                         <div>
-                        <button onclick="buscaPorData()" class="btn btn-primary"><span class="glyphicon glyphicon-search"><font face="Calibri">  CONSULTAR</font></span></button>
+                        <br>
+                        <div style=margin-left:10px><button onclick="buscaPorData()" class="btn btn-primary"><span class="glyphicon glyphicon-search"><font face="Calibri">  CONSULTAR</font></span></button>
                         </div>
                     </form>
                     <div id="resultadoPesquisa1"></div>
                     <br>
-                     <h2><font face="Calibri">Total de Registros Realizados</font></h2>
+                     <h2><font face="Calibri"><div style=margin-left:10px>Total de Registros Realizados</font></h2>
                 <div id="data">
                     <form action="#" method="get" name="formPesquisa2" id="formPesquisa2">
                         <div>
-                        <button onclick="mostrarNumeroAtas()" class="btn btn-primary"><span class="glyphicon glyphicon-search"><font face="Calibri">  CONSULTAR</font></span></button>
+                        
+                        <div style=margin-left:10px><button onclick="mostrarNumeroAtas()" class="btn btn-primary"><span class="glyphicon glyphicon-search"><font face="Calibri">  CONSULTAR</font></span></button>
                         </div>
                     </form>
-                    <div id="resultadoPesquisa2"></div>
+                    <b><div id="resultadoPesquisa2"></div><b>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
