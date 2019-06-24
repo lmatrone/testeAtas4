@@ -60,7 +60,7 @@
                     </div>
                 <br>
                 </form>
-                <div id="resultadoPesquisa1"></div>
+                <div id="resultadoPesquisa"></div>
 
                 <h2><font face="Calibri">Busca por Data</font></h2>
                 <div id="data">
@@ -92,7 +92,7 @@
             var frmPesquisa = document.formPesquisa;
             function consultarDecisoes() {
                 event.preventDefault();
-                $("#resultadoPesquisa1").html("");
+                $("#resultadoPesquisa").html("");
                 contract.ConsultaDeliberacoesConselho(frmPesquisa.numeroAta.value, function (erro, resultado) {
                     if (erro) {
                         console.log("consultarDecisoes");
@@ -101,7 +101,7 @@
                         frmPesquisa.numeroAta.value = "";
                         return
                     }
-                    $("#resultadoPesquisa1").html(" Data: " + resultado[2]+"." + " Participantes: " + resultado[3]+"." + " Pauta: " + resultado[0]+"." + " Deliberações: " + resultado[1]+".");
+                    $("#resultadoPesquisa").html("Resumo das deliberações: " + resultado);
                 })
             }
 
